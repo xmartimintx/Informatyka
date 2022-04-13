@@ -19,17 +19,14 @@ int main()
     while (a != b) {
         if (a < b) {
             b = b - a;
-
+            licznik = licznik + 1;
         }
 
         else {
 
             a = a - b;
+            licznik = licznik + 1;
         }
-
-
-
-        licznik = licznik + 1;
 
 
     }
