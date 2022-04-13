@@ -20,6 +20,10 @@ int main()
         if (a < b) {
             b = b - a;
             licznik = licznik + 1;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9874b82b6664848d0fd54be5dac865b64ebe51ed
         }
 
         else {
@@ -27,6 +31,10 @@ int main()
             a = a - b;
             licznik = licznik + 1;
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 9874b82b6664848d0fd54be5dac865b64ebe51ed
 
 
     }
