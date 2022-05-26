@@ -1,9 +1,11 @@
-﻿#include <iostream>
-#include <string>
-using namespace std;
+#include <iostream>
+#include <chrono>
+#include <ctime>
+using namespace std::chrono;
 
 
-string Funkcja(string imie, int dl, int klucz) { //poczatek funkcji
+
+std::string Funkcja(std::string imie, int dl, int klucz) { //poczatek funkcji
 
 	if (!(klucz >= -26 && klucz <= 26)) {
 
@@ -61,18 +63,27 @@ int main()
 {
 	int klucz;
 	int dl;
-	string imie;
+	std::string imie;
 
-	cout << "Podaj wyraz (małe litery): " << endl;
-	cin >> imie;
+	std::cout << "Podaj wyraz (małe litery): " << std::endl;
+
+	std::cin >> imie;
 	dl = imie.length();
-	cout << "Podaj klucz: " << endl;
-	cin >> klucz;
+	std::cout << "Podaj klucz: " << std::endl;
+	std::cin >> klucz;
+	std::chrono::time_point<std::chrono::system_clock> start, end;
+	start = std::chrono::system_clock::now();
+	std::cout << "Zakodowane imie to : " << std::endl;
+	std::cout << Funkcja(imie, dl, klucz) << std::endl;
+	std::cout << "Zdekodowane imie to : " << std::endl;
+	std::cout << Funkcja(Funkcja(imie, dl, klucz), dl, -klucz);
 
-	cout << "Zakodowane imie to : " << endl;
-	cout << Funkcja(imie, dl, klucz) << endl;
-	cout << "Zdekodowane imie to : " << endl;
-	cout << Funkcja(Funkcja(imie, dl, klucz), dl, -klucz);
+	end = std::chrono::system_clock::now();
+
+	std::chrono::duration<double> elapsed_seconds = end - start;
+	std::time_t end_time = std::chrono::system_clock::to_time_t(end);
+	std::cout << std::endl;
+	std::cout << "Kod wykonal sie w : " << elapsed_seconds.count() << "sekund" << std::endl;
 
 
 }
