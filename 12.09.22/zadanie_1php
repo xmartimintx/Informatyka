@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+<body>
+
+    <?php
+
+$zmienna=7;
+
+echo "Masz ".$zmienna." wiadomości";
+
+echo "<br>";
+
+if ($zmienna==0){
+
+    echo "Brak wiadomości. Liczba wiadomości to: " .$zmienna;
+
+}
+else{
+
+    echo("Ilość wiadomości jest równa: " .$zmienna);
+} 
+
+echo "<br>";
+echo "<br>";
+echo "<br>";
+
+$x=10;
+$y=0;
+
+if(++$x == 10) echo $x;
+echo "<br>";
+if($y++ == 0) echo $y;
+
+    ?>
+
+
+</body>
+</html>
