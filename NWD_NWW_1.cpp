@@ -3,9 +3,20 @@
 using namespace std;
 
 
+/*
+
+3 RODZAJE ITTERACJI:
+PĘTLA FOR zasada działania: cechy: Lista instrukcji (czyli w tym przypadku wypisanie tekstu na ekran) wykonuje się tak długo jak warunek (czyli stan końcowy) jest prawdziwy. Kiedy warunek staje się fałszywy, wówczas pętla zostaje zakończona.
+PĘTLA WHILE zasada działania: cechy: 
+PĘTLA DO WHILE zasada działania: cechy: 
+
+
+*/
+
+
 int main()
 {
-    int a, b, iloczyn, licznik;
+    int a, b, iloczyn, licznik, x, bezwzgledna;
 
     cout << "Podaj pierwszą liczbę: " << endl;
     cin >> a;
@@ -20,10 +31,6 @@ int main()
         if (a < b) {
             b = b - a;
             licznik = licznik + 1;
-<<<<<<< HEAD
-=======
-
->>>>>>> 9874b82b6664848d0fd54be5dac865b64ebe51ed
         }
 
         else {
@@ -31,24 +38,34 @@ int main()
             a = a - b;
             licznik = licznik + 1;
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> 9874b82b6664848d0fd54be5dac865b64ebe51ed
 
 
     }
 
 
+    cout << "PETLA DO WHILE" << endl;
+    
+    cout << "Podaj liczbę: " << endl;
+    cin >> x;
 
-    cout << "Największy wspólny dzielnik: " << a << endl;
-
-    cout << "Najmniejsza wspólna wielokrotność: " << iloczyn / a << endl;
-
-    cout << "Pętla wykonała się: " << licznik << " razy" << endl;
-
-
-
+    	do{
+		cin >> x;
+			
+		
+		if(x<0){
+		bezwzgledna=x*(-1);
+		}
+		
+		else {
+		
+		bezwzgledna=x;
+		
+		}
+	
+	
+	
+	
+	}while(bezwzgledna<5)
 
 
 }
